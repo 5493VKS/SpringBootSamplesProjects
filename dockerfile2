@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/webapp1-0.0.1-SNAPSHOT.jar webapp1-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "webapp1-0.0.1-SNAPSHOT.jar"]
+EXPOSE 8083
