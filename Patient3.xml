@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient xmlns:tns="http://www.viveksharma.org/Patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.viveksharma.org/Patient Patient.xsd "
+	id="123">
+	<tns:name>Rajeev gandhi</tns:name>
+	<tns:age>59</tns:age>
+	<tns:dob>1960-01-01</tns:dob>
+	<tns:email>rajeev@gmail.com</tns:email>
+	<tns:gender>M</tns:gender>
+	<tns:phone>885577552</tns:phone>
+	<tns:payment>
+		<!-- <tns:cash>1023456</tns:cash> -->
+		<tns:insurance>
+			<tns:limit>45</tns:limit>
+			<tns:provider>rimjhim</tns:provider>
+
+		</tns:insurance>
+	</tns:payment>
+</tns:patient>

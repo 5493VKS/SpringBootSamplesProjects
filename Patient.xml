@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient xmlns:tns="http://www.viveksharma.org/Patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.viveksharma.org/Patient Patient.xsd ">
+	<tns:id>101</tns:id>
+	<tns:name>Vivek Sharma</tns:name>
+	<tns:age>27</tns:age>
+	<tns:dob>1993-05-04</tns:dob>
+	<tns:email>vivek22@gmail.com</tns:email>
+	<tns:gender>mail</tns:gender>
+	<tns:phone>123456</tns:phone>
+</tns:patient>

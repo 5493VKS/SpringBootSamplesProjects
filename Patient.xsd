@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.viveksharma.org/Patient"
+	xmlns:tns="http://www.viveksharma.org/Patient"
+	elementFormDefault="qualified">
+
+	<element name="patient" type="tns:Patient" />
+
+	<complexType name="Patient">
+		<sequence>
+			<!-- <element name="id" type="tns:ID" minOccurs="1" /> -->
+			<element name="name" type="tns:STRING15CHAR" />
+			<element name="age" type="int" />
+			<element name="dob" type="date" />
+			<element name="email" type="string" />
+			<element name="gender" type="tns:gender" />
+			<element name="phone" type="int" />
+			<element name="payment" type="tns:Payment"/>
+		</sequence>
+		<attribute name="id" type = "tns:ID"/>
+	</complexType>
+	<complexType name="Payment">
+		<choice>
+			<element name="cash" type="int" />
+			<element name="insurance" type="tns:Insurance" />
+		</choice>
+	</complexType>
+	<complexType name="Insurance">
+		<all>
+			<element name="provider" type="string" />
+			<element name="limit" type="int" />
+		</all>
+	</complexType>
+	<simpleType name="ID">
+		<restriction base="int">
+			<pattern value="[0-9]*"></pattern>
+		</restriction>
+	</simpleType>
+	<simpleType name="STRING15CHAR">
+		<restriction base="string">
+			<maxLength value="15"></maxLength>
+		</restriction>
+	</simpleType>
+	<simpleType name="gender">
+		<restriction base="string">
+			<enumeration value="M"></enumeration>
+			<enumeration value="F"></enumeration>
+		</restriction>
+	</simpleType>
+</schema>
